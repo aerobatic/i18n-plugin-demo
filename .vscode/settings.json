@@ -1,0 +1,8 @@
+{
+  "beautify.language": {
+    "css": [
+      "css"
+    ]
+  },
+  "scss.validate": false
+}

@@ -1,0 +1,8 @@
+en:
+  description: Demonstration of the Aerobatic i18n plugin in conjunction with the jekyll-polyglot plugin.
+de:
+  description: Demonstration des Aerobatic i18n Plugins in Verbindung mit dem Jekyll-Polyglot Plugin.
+es:
+  description: Demostración del complemento Aerobatic i18n junto con el complemento jekyll-polyglot.
+fr:
+  description: Démonstration du plugin Aerobatic i18n en conjonction avec le plugin jekyll-polyglot.

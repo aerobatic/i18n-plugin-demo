@@ -5,4 +5,4 @@ permalink: about/
 lang: en
 ---
 
-[Welcome blog post]({% post_url 2018-11-04-welcome %})
+[Welcome blog post](/2018/11/04/welcome/)

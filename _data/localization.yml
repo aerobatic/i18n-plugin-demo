@@ -1,8 +1,12 @@
 en:
   description: Demonstration of the Aerobatic i18n plugin in conjunction with the jekyll-polyglot plugin.
+  select_lang: Select language
 de:
   description: Demonstration des Aerobatic i18n Plugins in Verbindung mit dem Jekyll-Polyglot Plugin.
+  select_lang: Sprache auswählen
 es:
   description: Demostración del complemento Aerobatic i18n junto con el complemento jekyll-polyglot.
+  select_lang: Seleccione el idioma
 fr:
   description: Démonstration du plugin Aerobatic i18n en conjonction avec le plugin jekyll-polyglot.
+  select_lang: Choisir la langue

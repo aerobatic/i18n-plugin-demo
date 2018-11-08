@@ -5,4 +5,4 @@ permalink: about/
 lang: es
 ---
 
-[Bienvenido publicación de blog]({% post_url 2018-11-04-welcome %})
+[Bienvenido publicación de blog](/2018/11/04/welcome/)

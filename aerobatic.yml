@@ -1,0 +1,22 @@
+id: ff4bcc10-917a-40e8-b036-98dbbf59ea2a
+
+plugins:
+  i18n:
+    options:
+      defaultLocale: en
+      locales:
+        es:
+          languages: [es]
+          countries: [mx, cr, es]
+        de:
+          languages: [de]
+        fr:
+          languages: [fr]
+          countries: [fr]
+
+  webpage:
+    options: {}
+
+  custom-errors:
+    options:
+      404: 404.html

@@ -1,7 +1,10 @@
 id: ff4bcc10-917a-40e8-b036-98dbbf59ea2a
 
+deploy:
+  directory: _site
+
 plugins:
-  i18n:
+  - name: i18n
     options:
       defaultLocale: en
       locales:
@@ -14,9 +17,10 @@ plugins:
           languages: [fr]
           countries: [fr]
 
-  webpage:
+  - name: webpage
     options: {}
 
-  custom-errors:
+  - name: custom-errors
     options:
-      404: 404.html
+      errors:
+        404: 404.html

@@ -15,30 +15,29 @@
     {%- include footer.html -%}
 
     <script>
-    var DEFAULT_LANG = '{{site.default_lang}}';
-    var ACTIVE_LANG = '{{site.active_lang}}';
+    var DEFAULT_LOCALE = '{{site.default_lang}}';
     var PAGE_URL = '{{page.url}}';
 
-    // JavaScript for handling changing the active language. 
-    document.querySelectorAll("div.languages button").forEach(function(elem) {
+    // JavaScript for handling changing the active locale. 
+    document.querySelectorAll("div.locale-selector button").forEach(function(elem) {
       elem.addEventListener("click", function() {
-        var lang = elem.getAttribute("data-lang");
+        var locale = elem.getAttribute("data-locale");
         var url;
 
-        // Set the aerobatic-locale cookie with the selected language. The cookie
+        // Set the aerobatic-locale cookie with the selected locale. The cookie
         // will remain valid for a full year so that if this browser returns to the site
-        // their selection will be remembered. Once they select a different language, the
+        // their selection will be remembered. Once they select a different locale, the
         // cookie is overwritten.
-        document.cookie = 'aerobatic-locale=' + lang +
+        document.cookie = 'aerobatic-locale=' + locale +
           '; expires=' + new Date(Date.now() + 365*24*60*60*1000).toUTCString() +
           '; path=/';
 
-        // For the default language, there is no prefix. For the other 
-        // languages, prepend the url with the language code, i.e. "/es/about/".
-        if (lang === DEFAULT_LANG) {
+        // For the default locale, there is no prefix. For the other 
+        // locales, prepend the url with the language code, i.e. "/es/about/".
+        if (lang === DEFAULT_LOCALE) {
           url = PAGE_URL;
         } else {
-          url = '/' + lang + PAGE_URL;
+          url = '/' + locale + PAGE_URL;
         }
         location.href = url;
       });

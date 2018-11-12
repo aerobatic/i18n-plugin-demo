@@ -16,10 +16,10 @@
           </span>
         </label>
 
-        <div class="languages">
+        <div class="locale-selector">
           <label>{{site.data.localization[site.active_lang].select_lang}}:</label>
           {%- for lang in site.languages -%}
-            <button data-lang="{{ lang }}" class="{% if lang == site.active_lang %}active{% endif %}">
+            <button data-locale="{{ lang }}" class="{% if lang == site.active_lang %}active{% endif %}">
               <img src="/assets/flags/{{lang}}.svg">
             </button>
           {%- endfor -%}

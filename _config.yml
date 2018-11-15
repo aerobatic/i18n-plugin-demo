@@ -2,14 +2,21 @@ permalink: pretty
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
+exclude:
+  [
+    "README.md",
+    "Gemfile",
+    "Gemfile.lock",
+    "deploy.sh",
+    "aero-deploy.tar.gz",
+    "aero-debug.log",
+  ]
+
 # jekyll-polyglot config
 languages: ["en", "es", "de", "fr"]
 default_lang: "en"
 exclude_from_localization: ["assets"]
 data_dir: ./_data
-
-twitter_username: jekyllrb
-github_username: jekyll
 
 # Build settings
 markdown: kramdown

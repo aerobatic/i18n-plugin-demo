@@ -16,30 +16,12 @@
 
     <script>
     var DEFAULT_LOCALE = '{{site.default_lang}}';
-    var PAGE_URL = '{{page.url}}';
 
     // JavaScript for handling changing the active locale. 
     document.querySelectorAll("div.locale-selector button").forEach(function(elem) {
       elem.addEventListener("click", function() {
         var locale = elem.getAttribute("data-locale");
-        var url;
-
-        // Set the aerobatic-locale cookie with the selected locale. The cookie
-        // will remain valid for a full year so that if this browser returns to the site
-        // their selection will be remembered. Once they select a different locale, the
-        // cookie is overwritten.
-        document.cookie = 'aerobatic-locale=' + locale +
-          '; expires=' + new Date(Date.now() + 365*24*60*60*1000).toUTCString() +
-          '; path=/';
-
-        // For the default locale, there is no prefix. For the other 
-        // locales, prepend the url with the language code, i.e. "/es/about/".
-        if (locale === DEFAULT_LOCALE) {
-          url = PAGE_URL;
-        } else {
-          url = '/' + locale + PAGE_URL;
-        }
-        location.href = url;
+        location.replace(location.pathname + '?__locale=' + locale);
       });
     });
     </script>
